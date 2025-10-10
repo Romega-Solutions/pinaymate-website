@@ -30,12 +30,12 @@ const Header: React.FC = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-gray-900/95 backdrop-blur-xl border-b border-pink-500/30 shadow-2xl"
-          : "bg-gray-900/80 backdrop-blur-lg border-b border-blue-300/20"
+          ? "bg-dalisay-950/95 backdrop-blur-xl border-b border-amihan-500/30 shadow-2xl"
+          : "bg-dalisay-950/80 backdrop-blur-lg border-b border-luna-300/20"
       }`}
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 via-purple-500/5 to-blue-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-amihan-500/5 via-dalisay-500/5 to-luna-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20 relative">
         <div
@@ -54,17 +54,17 @@ const Header: React.FC = () => {
                   className="w-full h-full object-contain drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300"
                 />
                 {/* Animated Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amihan-500 via-dalisay-500 to-luna-500 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-pulse"></div>
               </div>
             </div>
 
             <div className="flex flex-col">
-              {/* Main Brand Name - Notice the font-bold class for proper weight */}
-              <span className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:via-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300 cursor-pointer">
+              {/* Main Brand Name - Using Hello Paris Sans Bold */}
+              <span className="text-2xl font-hello-paris-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-amihan-400 group-hover:via-dalisay-400 group-hover:to-luna-400 group-hover:bg-clip-text transition-all duration-300 cursor-pointer nav-brand">
                 PinayMate
               </span>
-              {/* Tagline - font-light for lighter weight */}
-              <span className="text-xs text-purple-300 font-light opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              {/* Tagline - Hello Paris Sans Light */}
+              <span className="text-xs text-dalisay-300 font-hello-paris-light opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                 Find Your Forever Filipina
               </span>
             </div>
@@ -72,46 +72,48 @@ const Header: React.FC = () => {
 
           {/* Right side - Navigation and buttons */}
           <div className="flex items-center space-x-6">
-            {/* Enhanced Desktop Navigation */}
+            {/* Enhanced Desktop Navigation - Using system fonts for readability */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item, index) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-pink-500/10 hover:to-purple-500/10 hover:backdrop-blur-sm animate-fadeInUp"
+                  className="group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-amihan-500/10 hover:to-dalisay-500/10 hover:backdrop-blur-sm animate-fadeInUp"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-center">
-                    <span className="text-gray-200 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-purple-400 group-hover:bg-clip-text font-medium transition-all duration-300">
+                    <span className="text-neutral-200 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-amihan-400 group-hover:to-dalisay-400 group-hover:bg-clip-text font-medium transition-all duration-300 font-sans">
                       {item.label}
                     </span>
                   </div>
                   {/* Animated underline */}
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-amihan-500 to-dalisay-500 group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
                   {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-pink-500/5 group-hover:via-purple-500/5 group-hover:to-blue-500/5 rounded-xl transition-all duration-300 blur-sm"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-amihan-500/0 via-dalisay-500/0 to-luna-500/0 group-hover:from-amihan-500/5 group-hover:via-dalisay-500/5 group-hover:to-luna-500/5 rounded-xl transition-all duration-300 blur-sm"></div>
                 </a>
               ))}
             </div>
 
-            {/* CTA Button for Desktop */}
+            {/* CTA Button for Desktop - Using Hello Paris Sans Medium for buttons */}
             <div className="hidden md:flex items-center space-x-3">
               <a
                 href="#signup"
-                className="group relative bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-pulse-subtle"
+                className="group relative bg-gradient-to-r from-amihan-600 to-amihan-700 hover:from-amihan-700 hover:to-amihan-800 text-white font-hello-paris-medium px-6 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-pulse-subtle"
               >
-                <span className="relative z-10 font-medium">Join Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
+                <span className="relative z-10 font-hello-paris-medium">
+                  Join Now
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-amihan-400 to-dalisay-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
               </a>
             </div>
 
             {/* Enhanced Mobile menu button */}
             <button
               onClick={toggleMenu}
-              className="group md:hidden relative bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/20 text-white hover:text-pink-400 transition-all duration-300 p-3 rounded-xl backdrop-blur-sm hover:scale-110 transform"
+              className="group md:hidden relative bg-gradient-to-r from-amihan-500/10 to-dalisay-500/10 border border-amihan-500/20 text-white hover:text-amihan-400 transition-all duration-300 p-3 rounded-xl backdrop-blur-sm hover:scale-110 transform"
               aria-label="Toggle menu"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 to-purple-500/0 group-hover:from-pink-500/20 group-hover:to-purple-500/20 rounded-xl transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-amihan-500/0 to-dalisay-500/0 group-hover:from-amihan-500/20 group-hover:to-dalisay-500/20 rounded-xl transition-all duration-300"></div>
               <svg
                 className={`w-6 h-6 relative z-10 transform transition-all duration-300 ${
                   isMenuOpen ? "rotate-180" : "rotate-0"
@@ -142,22 +144,22 @@ const Header: React.FC = () => {
 
         {/* Enhanced Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-900/98 border-t border-pink-500/30 backdrop-blur-xl animate-slideInDown">
+          <div className="md:hidden bg-dalisay-950/98 border-t border-amihan-500/30 backdrop-blur-xl animate-slideInDown">
             <div className="px-4 pt-4 pb-6 space-y-2">
               {navItems.map((item, index) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="group flex items-center space-x-3 px-4 py-3 text-gray-200 hover:text-pink-400 hover:bg-gradient-to-r hover:from-pink-500/10 hover:to-purple-500/10 rounded-xl transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-pink-500/20 backdrop-blur-sm animate-fadeInUp"
+                  className="group flex items-center space-x-3 px-4 py-3 text-neutral-200 hover:text-amihan-400 hover:bg-gradient-to-r hover:from-amihan-500/10 hover:to-dalisay-500/10 rounded-xl transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-amihan-500/20 backdrop-blur-sm animate-fadeInUp"
                   style={{ animationDelay: `${index * 100}ms` }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="font-medium group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                  <span className="font-medium group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-amihan-400 group-hover:to-dalisay-400 group-hover:bg-clip-text transition-all duration-300 font-sans">
                     {item.label}
                   </span>
                   <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg
-                      className="w-4 h-4 text-pink-500"
+                      className="w-4 h-4 text-amihan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -171,14 +173,16 @@ const Header: React.FC = () => {
                 </a>
               ))}
 
-              {/* Mobile CTA Button */}
-              <div className="border-t border-pink-500/20 pt-4 mt-4">
+              {/* Mobile CTA Button - Using Hello Paris Sans Medium */}
+              <div className="border-t border-amihan-500/20 pt-4 mt-4">
                 <a
                   href="#signup"
-                  className="group flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 animate-zoom-pulse"
+                  className="group flex items-center justify-center space-x-2 bg-gradient-to-r from-amihan-600 to-amihan-700 hover:from-amihan-700 hover:to-amihan-800 text-white font-hello-paris-medium px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 animate-zoom-pulse"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="font-medium">Join PinayMate</span>
+                  <span className="font-hello-paris-medium">
+                    Join PinayMate
+                  </span>
                   <svg
                     className="w-4 h-4"
                     fill="currentColor"
