@@ -10,8 +10,25 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'hello-paris': ['"Hello Paris Sans"', 'sans-serif'],
-        'sans': ['"Hello Paris Sans"', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        "hello-paris": ['"Hello Paris Sans"', "sans-serif"],
+        "hello-paris-light": ['"Hello Paris Sans"', "sans-serif"],
+        "hello-paris-medium": ['"Hello Paris Sans"', "sans-serif"],
+        "hello-paris-bold": ['"Hello Paris Sans"', "sans-serif"],
+        "hello-paris-extralight": ['"Hello Paris Sans"', "sans-serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+      },
+      fontWeight: {
+        "hello-paris-extralight": "200",
+        "hello-paris-light": "300",
+        "hello-paris-regular": "400",
+        "hello-paris-medium": "500",
+        "hello-paris-bold": "700",
       },
       colors: {
         amihan: {
