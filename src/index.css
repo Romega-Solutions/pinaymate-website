@@ -99,16 +99,230 @@
   --color-error-100: #fde8ec; /* Error banner bg */
   --color-error-600: #d52c4d; /* Solid error bg / white text */
 }
-/* ─── Base Typography - Removed global font application ─── */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    sans-serif;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FONT DECLARATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Hello Paris Sans Font Family (Logo & Display) ─── */
+@font-face {
+  font-family: "Hello Paris Sans";
+  src: url("/fonts/hello-paris-sans/HelloParisSans-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* ─── Hello Paris Sans Utility Classes ─── */
+@font-face {
+  font-family: "Hello Paris Sans";
+  src: url("/fonts/hello-paris-sans/HelloParisSans-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hello Paris Sans";
+  src: url("/fonts/hello-paris-sans/HelloParisSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hello Paris Sans";
+  src: url("/fonts/hello-paris-sans/HelloParisSans-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hello Paris Sans";
+  src: url("/fonts/hello-paris-sans/HelloParisSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Lora Font Family (Headers) ─── */
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── DM Sans Font Family (Body & UI) ─── */
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FONT HIERARCHY & BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Base Body Text (DM Sans) ─── */
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* ─── All Headers (Lora) ─── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+/* ─── Logo & Brand Elements (Hello Paris Sans) ─── */
+.logo,
+.brand-text,
+.nav-brand {
+  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Hello Paris Sans (Logo & Display) ─── */
 .font-hello-paris {
   font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", sans-serif;
+}
+
+.font-hello-paris-extralight {
+  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 200;
 }
 
 .font-hello-paris-light {
@@ -135,28 +349,109 @@ body {
   font-weight: 700;
 }
 
-.font-hello-paris-extralight {
-  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+/* ─── Lora (Headers) ─── */
+.font-lora {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+}
+
+.font-lora-regular {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.font-lora-medium {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.font-lora-semibold {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+.font-lora-bold {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+/* ─── DM Sans (Body & UI) ─── */
+.font-dm-sans {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+}
+
+.font-dm-sans-extralight {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", sans-serif;
   font-weight: 200;
 }
 
-/* ─── Brand Elements - Apply Hello Paris Sans specifically ─── */
-.brand-text {
-  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+.font-dm-sans-light {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-.hero-heading {
-  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+.font-dm-sans-regular {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.nav-brand {
-  font-family: "Hello Paris Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+.font-dm-sans-medium {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", sans-serif;
+  font-weight: 500;
 }
 
+.font-dm-sans-semibold {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.font-dm-sans-bold {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.font-dm-sans-extrabold {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 800;
+}
+
+.font-dm-sans-black {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+/* ─── Hover contrast utilities (use design token --color-neutral-white) ─── */
+.group:hover .hover-contrast-text,
+.hover-contrast-text:hover {
+  color: var(--color-neutral-white) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--color-neutral-white) !important;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.group:hover .hover-contrast-bg,
+.hover-contrast-bg:hover {
+  /* switch to white background for max contrast, dark brand text */
+  background: var(--color-neutral-white) !important;
+  color: var(--color-dalisay-950) !important;
+  background-image: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+/* ensure gradient overlays don't hide the white variant */
+.group:hover .hover-contrast-bg > .contrast-overlay,
+.hover-contrast-bg:hover > .contrast-overlay {
+  opacity: 0 !important;
+}
 
 /* Custom animations for PinayMate Hero section */
 @keyframes fadeInUp {
