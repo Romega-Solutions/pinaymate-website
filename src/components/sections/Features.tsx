@@ -8,9 +8,7 @@ import {
   UserCheck,
   Lock,
   Users,
-  Send,
-  Image as ImageIcon,
-  Video,
+  Send
 } from "lucide-react";
 
 const Features: React.FC = () => {
