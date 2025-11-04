@@ -9,6 +9,7 @@ import Faqs from "./components/sections/Faqs";
 import Download from "./components/sections/Download";
 import Footer from "./components/sections/Footer";
 import Membership from "./components/sections/Membership";
+import { Heart } from "lucide-react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,57 +42,51 @@ function App() {
 
           {/* Floating hearts */}
           <div className="absolute top-1/4 left-1/4 animate-float-heart">
-            <div className="w-4 h-4 text-[#F4376D]/60">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-            </div>
+            <Heart className="w-4 h-4 text-[#F4376D]/60 fill-[#F4376D]/60" />
           </div>
           <div className="absolute top-3/4 right-1/4 animate-float-heart delay-700">
-            <div className="w-3 h-3 text-[#A855F7]/50">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-            </div>
+            <Heart className="w-3 h-3 text-[#A855F7]/50 fill-[#A855F7]/50" />
           </div>
           <div className="absolute top-1/2 left-1/6 animate-float-heart delay-1000">
-            <div className="w-5 h-5 text-[#3B82F6]/40">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-            </div>
+            <Heart className="w-5 h-5 text-[#3B82F6]/40 fill-[#3B82F6]/40" />
           </div>
         </div>
 
         {/* Main Loading Content */}
         <div className="relative z-10 text-center space-y-6 sm:space-y-8 px-4 sm:px-6">
-          {/* Logo with animated heart */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fadeInUp">
+          {/* Logo with actual PinayMate logo */}
+          <div className="flex flex-col items-center justify-center space-y-4 animate-fadeInUp">
             <div className="relative">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center shadow-2xl animate-heartbeat-3d">
-                <span className="text-white font-bold text-xl sm:text-2xl animate-pulse">
-                  ∞
-                </span>
+              {/* Main Logo */}
+              <div className="w-24 h-24 sm:w-32 sm:h-32 relative animate-heartbeat-3d">
+                <img
+                  src="/main-logo-no-bg.svg"
+                  alt="PinayMate Logo"
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
+                {/* Animated glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full blur-2xl opacity-50 animate-pulse"></div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full blur opacity-50 animate-pulse"></div>
             </div>
-            <div className="flex flex-col text-center sm:text-left">
-              <span className="text-3xl sm:text-4xl md:text-5xl font-black font-roboto animate-gradient-x bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text text-transparent">
+
+            {/* Brand Name */}
+            <div className="flex flex-col text-center">
+              <span className="text-3xl sm:text-4xl md:text-5xl font-hello-paris-bold animate-gradient-x bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text text-transparent">
                 PinayMate
               </span>
-              <span className="text-sm sm:text-base text-[#C8B5E6] font-roboto animate-slideInUp delay-300">
-                Elite Filipino Dating
+              <span className="text-sm sm:text-base text-[#C8B5E6] font-hello-paris-light animate-slideInUp delay-300">
+                Find Your Forever Filipina
               </span>
             </div>
           </div>
 
           {/* Loading Message */}
           <div className="space-y-3 sm:space-y-4 animate-fadeInUp delay-500">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-roboto">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-hello-paris-bold text-white">
               Preparing Your Love Journey
             </h2>
-            <p className="text-[#C8B5E6] font-roboto max-w-sm sm:max-w-md mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
-              Connecting hearts across the world • Finding your perfect Filipino
+            <p className="text-[#C8B5E6] font-dm-sans-regular max-w-sm sm:max-w-md mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
+              Connecting hearts across the world • Finding your perfect Filipina
               match
             </p>
           </div>
@@ -108,16 +103,16 @@ function App() {
 
             {/* Progress Text */}
             <div className="flex justify-between items-center text-xs sm:text-sm">
-              <span className="text-[#C8B5E6] font-roboto">
+              <span className="text-[#C8B5E6] font-dm-sans-regular">
                 {loadingProgress < 30
-                  ? "Initializing..."
+                  ? "Initializing platform..."
                   : loadingProgress < 60
-                  ? "Loading profiles..."
+                  ? "Loading authentic profiles..."
                   : loadingProgress < 90
-                  ? "Preparing matches..."
+                  ? "Setting up smart matching..."
                   : "Almost ready!"}
               </span>
-              <span className="text-white font-bold font-roboto">
+              <span className="text-white font-dm-sans-bold">
                 {Math.round(loadingProgress)}%
               </span>
             </div>
@@ -127,7 +122,7 @@ function App() {
           <div className="animate-fadeInUp delay-1000">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#F4376D]/10 via-[#A855F7]/10 to-[#3B82F6]/10 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-[#F4376D]/20 backdrop-blur-sm mx-4 sm:mx-0">
               <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full animate-pulse"></div>
-              <span className="text-[#C8B5E6] text-xs sm:text-sm font-roboto">
+              <span className="text-[#C8B5E6] text-xs sm:text-sm font-dm-sans-regular">
                 Premium dating experience loading...
               </span>
             </div>
@@ -138,7 +133,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#2d3748] font-roboto cursor-heart">
+    <div className="min-h-screen bg-[#2d3748] font-dm-sans-regular cursor-heart">
       {/* Header Component */}
       <Header />
 
