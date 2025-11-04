@@ -1,4 +1,15 @@
 import React, { useState, useEffect } from "react";
+import {
+  Heart,
+  Shield,
+  MessageCircle,
+  Sparkles,
+  CheckCircle,
+  UserCheck,
+  Lock,
+  Users,
+  Send
+} from "lucide-react";
 
 const Features: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -65,15 +76,9 @@ const Features: React.FC = () => {
             Why Choose{" "}
             <span className="relative text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text animate-gradient-x">
               PinayMate
-              <div className="absolute -top-2 -right-4 animate-bounce">
+              <div className="absolute -top-2 -right-8 animate-bounce">
                 <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center shadow-lg">
-                  <svg
-                    className="w-3 h-3 text-white animate-pulse"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
+                  <Heart className="w-3 h-3 text-white fill-white animate-pulse" />
                 </div>
               </div>
             </span>
@@ -128,7 +133,7 @@ const Features: React.FC = () => {
                         Smart Matching
                       </h3>
                       <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                        <span className="text-white font-bold text-xs">AI</span>
+                        <Sparkles className="w-4 h-4 text-white" />
                       </div>
                     </div>
 
@@ -136,12 +141,10 @@ const Features: React.FC = () => {
                       <div className="bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 p-4 rounded-xl border border-[#F4376D]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-100">
                         <div className="flex items-center space-x-3 mb-2">
                           <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-heartbeat shadow-lg">
-                            <span className="text-white text-xs font-bold">
-                              97%
-                            </span>
+                            <Heart className="w-4 h-4 text-white fill-white" />
                           </div>
                           <span className="font-semibold text-[#283040] text-sm">
-                            Compatibility Match
+                            97% Compatibility
                           </span>
                         </div>
                         <p className="text-xs text-[#8D99B2]">
@@ -152,9 +155,7 @@ const Features: React.FC = () => {
                       <div className="bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 p-4 rounded-xl border border-[#A855F7]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-200">
                         <div className="flex items-center space-x-3 mb-2">
                           <div className="w-8 h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center animate-spin-slow shadow-lg">
-                            <span className="text-white text-xs font-bold animate-pulse">
-                              AI
-                            </span>
+                            <Sparkles className="w-4 h-4 text-white" />
                           </div>
                           <span className="font-semibold text-[#283040] text-sm">
                             Smart Algorithm
@@ -168,17 +169,7 @@ const Features: React.FC = () => {
                       <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 p-4 rounded-xl border border-[#3B82F6]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-300">
                         <div className="flex items-center space-x-3 mb-2">
                           <div className="w-8 h-8 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                            <svg
-                              className="w-4 h-4 text-white"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
+                            <Users className="w-4 h-4 text-white" />
                           </div>
                           <span className="font-semibold text-[#283040] text-sm">
                             Real-Time Updates
@@ -191,8 +182,9 @@ const Features: React.FC = () => {
                     </div>
 
                     <div className="mt-6">
-                      <button className="w-full bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white py-3 rounded-full text-sm font-bold font-roboto shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-subtle">
-                        Find Your Match
+                      <button className="w-full bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white py-3 rounded-full text-sm font-bold font-roboto shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-subtle flex items-center justify-center space-x-2">
+                        <Heart className="w-4 h-4 fill-white" />
+                        <span>Find Your Match</span>
                       </button>
                     </div>
                   </div>
@@ -226,13 +218,13 @@ const Features: React.FC = () => {
               <div className="space-y-4 animate-fadeInUp delay-300">
                 <div className="flex items-center justify-center lg:justify-start space-x-4">
                   <div className="flex items-center space-x-2 bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 px-4 py-2 rounded-full border border-[#F4376D]/20 backdrop-blur-sm">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <CheckCircle className="w-4 h-4 text-green-500" />
                     <span className="text-[#C8B5E6] text-sm font-roboto">
                       97% Match Accuracy
                     </span>
                   </div>
                   <div className="flex items-center space-x-2 bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 px-4 py-2 rounded-full border border-[#A855F7]/20 backdrop-blur-sm">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+                    <Sparkles className="w-4 h-4 text-blue-500" />
                     <span className="text-[#C8B5E6] text-sm font-roboto">
                       Real-Time Learning
                     </span>
@@ -245,19 +237,7 @@ const Features: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#F4376D] to-[#A855F7] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Start Smart Matching</span>
-                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
-                      <svg
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        className="animate-pulse"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                    <Heart className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </button>
               </div>
@@ -300,9 +280,7 @@ const Features: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-[#A855F7] via-[#3B82F6] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Create Your Profile</span>
-                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
-                      <span className="animate-pulse">✨</span>
-                    </div>
+                    <Sparkles className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </button>
               </div>
@@ -321,41 +299,45 @@ const Features: React.FC = () => {
                       <h3 className="font-bold text-[#283040] font-roboto">
                         Maria, 24
                       </h3>
-                      <p className="text-xs text-[#8D99B2]">
-                        📍 Manila, Philippines
+                      <p className="text-xs text-[#8D99B2] flex items-center justify-center space-x-1">
+                        <Users className="w-3 h-3" />
+                        <span>Manila, Philippines</span>
                       </p>
                     </div>
 
                     <div className="space-y-2">
                       <div className="bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 p-2 rounded-lg border border-[#F4376D]/20">
-                        <p className="text-xs font-semibold text-[#283040] mb-1">
-                          About Me
+                        <p className="text-xs font-semibold text-[#283040] mb-1 flex items-center space-x-1">
+                          <Heart className="w-3 h-3 text-[#F4376D]" />
+                          <span>About Me</span>
                         </p>
                         <p className="text-xs text-[#8D99B2]">
-                          Love traveling, cooking, and family time 💕
+                          Love traveling, cooking, and family time
                         </p>
                       </div>
 
                       <div className="bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 p-2 rounded-lg border border-[#A855F7]/20">
-                        <p className="text-xs font-semibold text-[#283040] mb-1">
-                          Interests
+                        <p className="text-xs font-semibold text-[#283040] mb-1 flex items-center space-x-1">
+                          <Sparkles className="w-3 h-3 text-[#A855F7]" />
+                          <span>Interests</span>
                         </p>
                         <div className="flex flex-wrap gap-1">
-                          <span className="bg-[#F4376D] text-white px-2 py-1 rounded-full text-xs">
-                            Cooking
+                          <span className="bg-[#F4376D] text-white px-2 py-1 rounded-full text-xs flex items-center space-x-1">
+                            <span>Cooking</span>
                           </span>
-                          <span className="bg-[#A855F7] text-white px-2 py-1 rounded-full text-xs">
-                            Travel
+                          <span className="bg-[#A855F7] text-white px-2 py-1 rounded-full text-xs flex items-center space-x-1">
+                            <span>Travel</span>
                           </span>
-                          <span className="bg-[#3B82F6] text-white px-2 py-1 rounded-full text-xs">
-                            Music
+                          <span className="bg-[#3B82F6] text-white px-2 py-1 rounded-full text-xs flex items-center space-x-1">
+                            <span>Music</span>
                           </span>
                         </div>
                       </div>
 
                       <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 p-2 rounded-lg border border-[#3B82F6]/20">
-                        <p className="text-xs font-semibold text-[#283040] mb-1">
-                          Looking For
+                        <p className="text-xs font-semibold text-[#283040] mb-1 flex items-center space-x-1">
+                          <UserCheck className="w-3 h-3 text-[#3B82F6]" />
+                          <span>Looking For</span>
                         </p>
                         <p className="text-xs text-[#8D99B2]">
                           Serious relationship & family
@@ -364,8 +346,9 @@ const Features: React.FC = () => {
                     </div>
 
                     <div className="mt-4">
-                      <button className="w-full bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white py-2 rounded-full text-xs font-bold font-roboto">
-                        💕 Send Message
+                      <button className="w-full bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white py-2 rounded-full text-xs font-bold font-roboto flex items-center justify-center space-x-2">
+                        <Heart className="w-3 h-3 fill-white" />
+                        <span>Send Message</span>
                       </button>
                     </div>
                   </div>
@@ -390,7 +373,9 @@ const Features: React.FC = () => {
                 <div className="w-full h-96 bg-[#283040] rounded-2xl overflow-hidden relative">
                   <div className="p-4">
                     <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full"></div>
+                      <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center">
+                        <MessageCircle className="w-3 h-3 text-white" />
+                      </div>
                       <span className="text-white font-bold text-sm font-roboto">
                         Messages
                       </span>
@@ -401,13 +386,13 @@ const Features: React.FC = () => {
                       <div className="flex items-start space-x-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex-shrink-0"></div>
                         <div className="bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white p-2 rounded-lg text-xs font-roboto max-w-[200px]">
-                          Hi! I loved your profile 😊 How's your day going?
+                          Hi! I loved your profile. How's your day going?
                         </div>
                       </div>
 
                       <div className="flex items-start space-x-2 justify-end">
                         <div className="bg-[#8D99B2] text-white p-2 rounded-lg text-xs font-roboto max-w-[200px]">
-                          Thank you! Having a great day. Love your photos! 💕
+                          Thank you! Having a great day. Love your photos!
                         </div>
                         <div className="w-8 h-8 bg-[#8D99B2] rounded-full flex-shrink-0"></div>
                       </div>
@@ -415,7 +400,7 @@ const Features: React.FC = () => {
                       <div className="flex items-start space-x-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex-shrink-0"></div>
                         <div className="bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white p-2 rounded-lg text-xs font-roboto max-w-[200px]">
-                          Would you like to video chat later? 📹
+                          Would you like to chat more?
                         </div>
                       </div>
 
@@ -433,14 +418,8 @@ const Features: React.FC = () => {
                         placeholder="Type a message..."
                         className="flex-1 bg-transparent text-white text-xs placeholder-gray-400 outline-none font-roboto"
                       />
-                      <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                        </svg>
+                      <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                        <Send className="w-3 h-3 text-white" />
                       </div>
                     </div>
                   </div>
@@ -470,16 +449,14 @@ const Features: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#F4376D] to-[#A855F7] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Start Chatting</span>
-                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
-                      <span className="animate-pulse">💬</span>
-                    </div>
+                    <MessageCircle className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Feature 4: SheerID Verified Users - Text Left, Image Right */}
+          {/* Feature 4: Verified Users - Text Left, Image Right */}
           <div
             className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transform transition-all duration-1000 ${
               isVisible
@@ -490,18 +467,18 @@ const Features: React.FC = () => {
           >
             <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left animate-slideInLeft delay-1400">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
-                SheerID
+                Verified & Authentic
                 <br />
                 <span className="text-transparent bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text">
-                  Verified Users
+                  User Profiles
                 </span>
               </h3>
               <p className="text-base md:text-lg text-[#C8B5E6] leading-relaxed font-roboto px-4 lg:px-0 animate-fadeInUp delay-200">
                 Every member undergoes comprehensive{" "}
                 <span className="text-transparent bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text font-bold">
-                  SheerID verification
+                  profile verification
                 </span>{" "}
-                including identity, income, and background checks. Connect with
+                including identity and background checks. Connect with
                 confidence knowing all profiles are 100% authentic with no fake
                 accounts or catfish profiles.
               </p>
@@ -510,9 +487,7 @@ const Features: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Get Verified Now</span>
-                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
-                      <span className="animate-pulse">🛡️</span>
-                    </div>
+                    <Shield className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </button>
               </div>
@@ -529,27 +504,16 @@ const Features: React.FC = () => {
                         Verified Profiles
                       </h3>
                       <div className="flex items-center space-x-1">
-                        <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                        <span className="text-xs font-bold text-green-600">
-                          SheerID
-                        </span>
+                        <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-3 h-3 text-white" />
+                        </div>
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg border border-green-200">
                         <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <UserCheck className="w-5 h-5 text-white" />
                         </div>
                         <div>
                           <p className="font-semibold text-[#283040] text-sm">
@@ -563,41 +527,21 @@ const Features: React.FC = () => {
 
                       <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
                         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <Shield className="w-5 h-5 text-white" />
                         </div>
                         <div>
                           <p className="font-semibold text-[#283040] text-sm">
-                            Income Verified
+                            Profile Verified
                           </p>
                           <p className="text-xs text-[#8D99B2]">
-                            Financial status confirmed
+                            Authenticity confirmed
                           </p>
                         </div>
                       </div>
 
                       <div className="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg border border-purple-200">
                         <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <Lock className="w-5 h-5 text-white" />
                         </div>
                         <div>
                           <p className="font-semibold text-[#283040] text-sm">
@@ -611,9 +555,10 @@ const Features: React.FC = () => {
                     </div>
 
                     <div className="mt-4 text-center">
-                      <span className="text-xs text-green-600 font-bold">
-                        ✅ 100% Authentic Profiles
-                      </span>
+                      <div className="inline-flex items-center space-x-2 text-green-600 text-xs font-bold">
+                        <CheckCircle className="w-4 h-4" />
+                        <span>100% Authentic Profiles</span>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Heart, MessageCircle, Users, Sparkles } from "lucide-react";
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,14 +72,14 @@ const Hero: React.FC = () => {
                   Perfect Filipina
                 </span>
                 <span className="block text-transparent bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] bg-clip-text animate-fadeInUp delay-300 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-1000">
-                  Soulmate 💕
+                  Soulmate
                 </span>
               </h1>
 
               <div className="space-y-6 animate-fadeInUp delay-500">
                 <p className="text-xl md:text-2xl text-[#C8B5E6] leading-relaxed max-w-2xl font-roboto">
                   <span className="text-[#F4376D] font-bold">
-                    🌺 Join the elite community
+                    Join the elite community
                   </span>{" "}
                   where genuine love meets Filipino beauty. Connect with{" "}
                   <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text font-bold">
@@ -87,50 +88,44 @@ const Hero: React.FC = () => {
                   who share your values and dreams of lasting relationships.
                 </p>
 
-                {/* Success Stats */}
+                {/* Feature Stats */}
                 <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 py-4 justify-center sm:justify-start">
                   <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#F4376D]/20 backdrop-blur-sm">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-white font-bold text-xs sm:text-sm">
-                        💕
-                      </span>
+                      <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
                     <div>
                       <div className="text-white font-black text-sm sm:text-lg font-roboto">
-                        94%
+                        Authentic
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
-                        Find Love
+                        Profiles
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#A855F7]/20 backdrop-blur-sm">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center animate-pulse delay-75">
-                      <span className="text-white font-bold text-xs sm:text-sm">
-                        ✨
-                      </span>
+                      <Users className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
                     <div>
                       <div className="text-white font-black text-sm sm:text-lg font-roboto">
-                        500+
+                        Smart
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
-                        Stories
+                        Matching
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#3B82F6]/20 backdrop-blur-sm">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center animate-pulse delay-150">
-                      <span className="text-white font-bold text-xs sm:text-sm">
-                        🛡️
-                      </span>
+                      <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
                     <div>
                       <div className="text-white font-black text-sm sm:text-lg font-roboto">
-                        100%
+                        Instant
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
-                        Verified
+                        Messaging
                       </div>
                     </div>
                   </div>
@@ -145,23 +140,14 @@ const Hero: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center justify-center space-x-2">
                     <span>Find Your Filipina Love</span>
-                    <svg
-                      className="w-6 h-6 transform group-hover:translate-x-1 transition-transform"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <Heart className="w-6 h-6 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </button>
 
                 <button className="group bg-transparent border-2 border-[#F4376D] text-[#F4376D] px-8 py-5 rounded-2xl text-xl font-bold hover:bg-[#F4376D] hover:text-white transition-all duration-300 font-roboto">
                   <span className="flex items-center justify-center space-x-2">
-                    <span>Watch Success Stories</span>
+                    <span>Learn More</span>
+                    <Sparkles className="w-5 h-5" />
                   </span>
                 </button>
               </div>
@@ -169,8 +155,8 @@ const Hero: React.FC = () => {
               {/* Trust Indicators */}
               <div className="space-y-4">
                 <p className="text-[#C8B5E6] font-medium font-roboto text-center sm:text-left">
-                  💯 Trusted by thousands of couples worldwide • 🛡️ SheerID
-                  Verified Profiles
+                  Safe & Secure Platform • Real-Time Communication • Privacy
+                  Protected
                 </p>
               </div>
             </div>
@@ -211,9 +197,7 @@ const Hero: React.FC = () => {
                       <div className="flex items-center justify-between mb-6 sm:mb-8">
                         <div className="flex items-center space-x-2 sm:space-x-3">
                           <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                            <span className="text-white font-bold text-base sm:text-lg">
-                              ∞
-                            </span>
+                            <Heart className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                           </div>
                           <span className="text-white text-xl sm:text-2xl font-black font-roboto">
                             PinayMate
@@ -239,7 +223,6 @@ const Hero: React.FC = () => {
                               Maria, 24
                             </div>
                             <div className="text-[#C8B5E6] text-sm font-roboto flex items-center justify-center space-x-1 mt-1">
-                              <span>📍</span>
                               <span>Manila, Philippines</span>
                             </div>
                             <div className="flex items-center justify-center space-x-1 mt-2">
@@ -251,9 +234,8 @@ const Hero: React.FC = () => {
                           </div>
 
                           <div className="text-[#C8B5E6] text-sm font-roboto mb-4 bg-white/5 p-3 rounded-xl text-center">
-                            "Looking for genuine love and serious relationship
-                            💕 Ready to start new chapter with the right
-                            person."
+                            "Looking for genuine love and serious relationship.
+                            Ready to start new chapter with the right person."
                           </div>
 
                           <div className="flex justify-center space-x-2 mb-4">
@@ -279,7 +261,7 @@ const Hero: React.FC = () => {
                               <span className="text-gray-300 text-xl">✕</span>
                             </button>
                             <button className="w-16 h-12 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all animate-pulse">
-                              <span className="text-white text-xl">💕</span>
+                              <Heart className="w-6 h-6 text-white fill-white" />
                             </button>
                           </div>
                         </div>
@@ -290,16 +272,16 @@ const Hero: React.FC = () => {
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="flex justify-around items-center bg-black/70 rounded-2xl py-4 px-6 backdrop-blur-lg border border-white/10">
                         <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse">
-                          <span className="text-white text-sm">💕</span>
+                          <Heart className="w-4 h-4 text-white" />
                         </div>
                         <div className="w-8 h-8 bg-gray-600/50 rounded-full flex items-center justify-center">
-                          <span className="text-gray-400 text-sm">💬</span>
+                          <MessageCircle className="w-4 h-4 text-gray-400" />
                         </div>
                         <div className="w-8 h-8 bg-gray-600/50 rounded-full flex items-center justify-center">
-                          <span className="text-gray-400 text-sm">⭐</span>
+                          <Sparkles className="w-4 h-4 text-gray-400" />
                         </div>
                         <div className="w-8 h-8 bg-gray-600/50 rounded-full flex items-center justify-center">
-                          <span className="text-gray-400 text-sm">👤</span>
+                          <Users className="w-4 h-4 text-gray-400" />
                         </div>
                       </div>
                     </div>
@@ -335,7 +317,7 @@ const Hero: React.FC = () => {
                         <div className="flex justify-end">
                           <div className="bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white p-3 rounded-2xl max-w-[200px] animate-slideInRight">
                             <div className="text-sm font-roboto">
-                              Hi Isabella! Your profile is amazing 😊
+                              Hi Isabella! Your profile is amazing
                             </div>
                             <div className="text-xs opacity-70 mt-1">
                               2:30 PM
@@ -346,7 +328,7 @@ const Hero: React.FC = () => {
                         <div className="flex justify-start">
                           <div className="bg-white/10 text-white p-3 rounded-2xl max-w-[200px] backdrop-blur-sm animate-slideInLeft">
                             <div className="text-sm font-roboto">
-                              Thank you! I'd love to get to know you better 💕
+                              Thank you! I'd love to get to know you better
                             </div>
                             <div className="text-xs opacity-70 mt-1">
                               2:32 PM
@@ -357,7 +339,7 @@ const Hero: React.FC = () => {
                         <div className="flex justify-end">
                           <div className="bg-gradient-to-r from-[#F4376D] to-[#A855F7] text-white p-3 rounded-2xl max-w-[200px] animate-slideInRight delay-75">
                             <div className="text-sm font-roboto">
-                              Would you like to video chat? 📹
+                              Would you like to chat more?
                             </div>
                             <div className="text-xs opacity-70 mt-1">
                               2:35 PM
@@ -367,7 +349,7 @@ const Hero: React.FC = () => {
 
                         <div className="flex justify-center">
                           <div className="bg-green-500/20 border border-green-500/30 text-green-400 px-3 py-1 rounded-full text-xs font-roboto animate-pulse">
-                            💕 Isabella is typing...
+                            Isabella is typing...
                           </div>
                         </div>
                       </div>
@@ -379,34 +361,27 @@ const Hero: React.FC = () => {
               {/* Floating Elements */}
               <div className="absolute top-10 right-10 text-[#F4376D] animate-bounce">
                 <div className="w-12 h-12 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center shadow-lg">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
+                  <Heart className="w-6 h-6 text-white fill-white" />
                 </div>
               </div>
 
               <div className="absolute bottom-10 left-6 text-[#A855F7] animate-pulse delay-150">
                 <div className="w-8 h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-lg">✨</span>
+                  <Sparkles className="w-4 h-4 text-white" />
                 </div>
               </div>
 
               <div className="absolute top-1/3 left-0 text-[#3B82F6] animate-bounce delay-300">
                 <div className="w-6 h-6 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-sm">💕</span>
+                  <MessageCircle className="w-3 h-3 text-white" />
                 </div>
               </div>
 
               {/* Success Notification */}
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 animate-slideInDown delay-1000">
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold flex items-center space-x-2 shadow-lg">
-                  <span>🎉</span>
+                  <Heart className="w-4 h-4 fill-white" />
                   <span>It's a Match!</span>
-                  <span>💕</span>
                 </div>
               </div>
             </div>
