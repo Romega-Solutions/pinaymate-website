@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Check,
   Heart,
@@ -19,7 +18,7 @@ import {
 } from "lucide-react";
 
 const Membership: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  // const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   // Realistic function handlers that you can implement in your real app
   const handleJoinFree = () => {
@@ -33,8 +32,8 @@ const Membership: React.FC = () => {
     planDuration: string = "1month"
   ) => {
     // Implement: Navigate to payment/checkout page with plan details
-    console.log(`Selected plan: ${planType}, Duration: ${planDuration}`);
-    setSelectedPlan(planType);
+    // console.log(`Selected plan: ${planType}, Duration: ${planDuration}`);
+    // setSelectedPlan(planType);
 
     // In real app, you would:
     // 1. Store plan selection in state/context
